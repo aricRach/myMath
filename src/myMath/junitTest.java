@@ -228,7 +228,6 @@ class junitTest {
 
 		// Act
 		double actual=p1.area(-10, 10, 0.001);
-		System.out.println(actual);
 
 		// Assert
 		Assert.assertEquals(expected, actual,0.01);
