@@ -488,19 +488,18 @@ public class Polynom implements Polynom_able{
 			throw new RuntimeException("Error: the width of each rectangle cant be negative ");
 
 		}
-		int steps=(int)((x1-x0)/eps);//the number of rectangles
-		double area=0;//the sum of all the areas
-		double temp=0;//the current area
+		int steps=(int)((x1-x0)/eps); //the number of rectangles
+		double area=0; //the sum of all the areas
+		double temp=0; //the current area
 		double start=x0+eps;
 		for(double i=0;i<steps;i++) {
 
 			temp=eps*f(start);
-			if (temp<0) {//to sum only above the x axis
+			if (temp<0) { //to sum only above the x axis
 
 				area=area+temp;
 			}
 			start=start+eps;
-
 		}
 		return area;
 

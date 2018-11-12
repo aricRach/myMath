@@ -23,11 +23,13 @@ public class chartExample {
 
 		double[] y1Data = new double[] { -30,30};
 		double[] y0Data = new double[] { 0,0};
+		//to decide the bound for x  and y axis
 		if (p.f(start)>0 && p.f(end)<0 || p.f(start)>0 && p.f(end)<0) {
 
 			y1Data= new double[]{ p.f(start),p.f(end)};
 		}
 
+		
 		double eps=0.00001;
 		int sizeArray=(int)((end-start)/eps); // parting the equation to many intervals for showing better
 
@@ -46,7 +48,7 @@ public class chartExample {
 					exPoints.add(i);
 				}
 			}
-			// System.out.println(arrayIndex);
+			//for the last point to not out bound the array
 			if (arrayIndex<sizeArray) {
 
 				x[arrayIndex]=i;
@@ -57,11 +59,13 @@ public class chartExample {
 
 		}
 
+		//creating the chart
 		XYChart chart2 = QuickChart.getChart("Sample Chart", "X-Axis", "Y-Axis", "f(x)", x, y);
+		//creating the axis
 		chart2.addSeries("x", x0Data, x1Data);
 		chart2.addSeries("y", y0Data, y1Data);
 
-		// System.out.println("The number of Extreme points is "+exPoints.size());
+		//to show the extreme points creating a new series for each point 
 		for(int i=0;i<exPoints.size();i++) {
 			String str = "";
 			str += i+1;
