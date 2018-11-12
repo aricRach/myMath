@@ -218,7 +218,7 @@ class junitTest {
 		Assert.assertEquals(expected, actual, 0.0000001);
 		
 	}
-	//Kabaso
+
 	@Test
 	public void areaTest() {
 
