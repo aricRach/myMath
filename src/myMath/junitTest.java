@@ -220,7 +220,7 @@ class junitTest {
 	}
 	
 	@Test
-	public void areaTest() {//מה יהיה המרחק מהתוצאה המדויקת?
+	public void areaTest() {
 
 		
 		// Arrange
