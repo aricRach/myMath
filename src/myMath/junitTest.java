@@ -1,6 +1,5 @@
 package myMath;
 
-
 import org.junit.Assert;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -10,14 +9,12 @@ import org.junit.jupiter.api.Test;
 
 class junitTest {
 
-
 	private Polynom poly;
 	private Polynom p1;
 	private Polynom polyEx1;
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-
 	}
 
 	@AfterAll
@@ -32,10 +29,6 @@ class junitTest {
 		p1 = new Polynom("-2x^2+5.5x^1+30x^0");
 		
 		polyEx1 =new Polynom ("0.2x^4-1.5x^3+3x^2-1x^1-5x^0");
-				
-				
-		
-
 	}
 
 	@AfterEach
@@ -46,7 +39,6 @@ class junitTest {
 	//	void test() {
 	//		fail("Not yet implemented");
 	//	}
-
 	
 	@Test
 	public void equalTest() {//test first in order to use that function in other tests
@@ -59,7 +51,6 @@ class junitTest {
 
 		// Assert
 		Assert.assertNotSame(expected, actual);//check addreses in the memory (should be different)
-		
 	}
 	
 	@Test
@@ -71,7 +62,6 @@ class junitTest {
 			
 			Assert.fail();
 		}
-		
 	}
 	
 
@@ -140,34 +130,30 @@ class junitTest {
 		
 		Assert.assertEquals(expected, actual, 0);
 
-
-
 		double expected2=7.5;
 		actual=p1.f(5);
 
 		Assert.assertEquals(expected2, actual, 0);
-
 	}
 
 	@Test
 	public void isZeroTest() {
 		
-		//test with poly-should be zero beacuse we will add the negative polynom
+		//Test with poly-should be zero beacuse we will add the negative polynom
 
 		Polynom polyNegative = new Polynom("-5x^4+7x^3-2x^1+30x^0");
 		poly.add(polyNegative);
 		Polynom actual=poly;
 		// Assert
-		Assert.assertTrue(actual.isZero());//if true pass the test
+		Assert.assertTrue(actual.isZero()); //if true pass the test
 
-		//one more test with p1 this time
-		//the answer should not be zero polynom 
+		//One more test with p1 this time
+		//The answer should not be zero Polynom 
 		Polynom AlmostP1Negative = new Polynom("-2x^2+5.5x^1-30x^0");
 		p1.add(AlmostP1Negative);
 		actual=p1;
 		//Assert
 		Assert.assertFalse(actual.isZero());//if false pass the test
-
 	}
 
 	@Test
@@ -183,7 +169,6 @@ class junitTest {
 		if (!expected.equals(actual)) {
 
 			Assert.fail();
-
 		}
 	}
 	
@@ -216,13 +201,11 @@ class junitTest {
 
 		// Assert
 		Assert.assertEquals(expected, actual, 0.0000001);
-		
 	}
 
 	@Test
 	public void areaTest() {
 
-		
 		// Arrange
 		double expected=185.1131672612053;
 
@@ -231,7 +214,6 @@ class junitTest {
 
 		// Assert
 		Assert.assertEquals(expected, actual,0.01);
-		
 	}
 	
 	@Test
@@ -244,6 +226,5 @@ class junitTest {
 		
 		// Assert
 		Assert.assertEquals(expected, actual,0.01);
-		
 	}
 }
