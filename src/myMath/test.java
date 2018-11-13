@@ -105,11 +105,6 @@ public class test {
 	System.out.println("the area above the x axis of "+poly3+" between -2.449 and 2.449");
 	System.out.println("the result should be : 8.9999 because it sums above the x axis");
 	System.out.println(poly3.area(-2.449, 2.449, 0.1));
-	
-
-		Polynom matala1=new Polynom("0.2x^4-1.5x^3+3x^2-1x^1-5x^0");
-		System.out.println("the result of the area under the xaxis and above the function : "+ matala1+" should be :-25.18374177435345");
-		System.out.println(matala1.areaUnderXaxis(-2, 6, 0.01));
 		
 		Polynom check=new Polynom ("-0.1x^2-5x^1+2x^0");
 		System.out.println("the result of the area under the xaxis and above the function : "+ check+" should be : : -264.0212959999859");
@@ -118,6 +113,10 @@ public class test {
 		Polynom check2=new Polynom("x^2+10x^0");
 		System.out.println("the result of the area under the xaxis and above the function :"+ check2+" should be : 0");
 		System.out.println(check2.areaUnderXaxis(-10, 10, 0.01));
+		
+		Polynom matala1=new Polynom("0.2x^4-1.5x^3+3x^2-1x^1-5x^0");
+		System.out.println("the result of the area under the xaxis and above the function : "+ matala1+" should be :-25.18374177435345");
+		System.out.println(matala1.areaUnderXaxis(-2, 6, 0.01));
 		
 		//Showing the function chart in gui
 		Polynom function = new Polynom("0.2x^4-1.5x^3+3x^2-1x^1-5x^0");

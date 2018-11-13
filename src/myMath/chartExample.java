@@ -1,5 +1,6 @@
 package myMath;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import org.knowm.xchart.QuickChart;
@@ -74,7 +75,10 @@ public class chartExample {
 			double[] ey = new double[1] ;
 			ex[0]=exPoints.get(i);
 			ey[0]=p.f(exPoints.get(i));
-			chart2.addSeries(str,ex,ey);
+			DecimalFormat numberFormat=new DecimalFormat("0.0#");
+			String EXPx1=numberFormat.format(exPoints.get(i));
+			String EXPy1=numberFormat.format(p.f(exPoints.get(i)));
+			chart2.addSeries("Ex point"+str+" "+"( "+EXPx1+","+EXPy1+")",ex,ey);
 		}
 
 		new SwingWrapper(chart2).displayChart();
